@@ -1,0 +1,43 @@
+@use './../../global-styles/setup-style' as *;
+
+.mainBanner {
+  .wrapper {
+    @include flex_center;
+    justify-content: space-between;
+    padding: var(--padding-section);
+    gap: var(--gap-contentBox);
+    background-color: var(--color-bg-content);
+
+    .contentContainer {
+      width: 40%;
+
+      .title {
+        font-family: var(--font-noto-semiBold);
+        font-size: var(--font-size-xxl);
+        line-height: 100%;
+        color: var(--color-primary);
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        margin-bottom: var(--marginBottom-title);
+      }
+      .text {
+        color: var(--color-secondary);
+        font-size: --var(--font-size-md);
+        margin-bottom: 3.2em;
+      }
+      .btnContainer {
+        display: flex;
+        gap: var(--gap-contentBox);
+
+        .btn {
+          font-size: var(--font-size-base-lg);
+        }
+      }
+    }
+    .pictureContainer {
+      width: 60%;
+
+      .picture {
+      }
+    }
+  }
+}

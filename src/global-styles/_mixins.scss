@@ -1,0 +1,97 @@
+@use 'variables' as *;
+
+@mixin before_after($background-image: false, $width, $height: $width) {
+  content: '';
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: $width;
+  height: $height;
+  @if $background-image {
+    background-image: url($background-image);
+  }
+}
+
+@mixin flex_verticalAlign($position) {
+  display: flex;
+  align-items: $position;
+}
+@mixin flex_horizonAlign($position) {
+  display: flex;
+  justify-content: $position;
+}
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin primaryTextFormat {
+  color: $greenDarkColor;
+  font-family: $stolzlRegular;
+  font-size: 32px;
+  line-height: 120%;
+
+  @media screen and (max-width: 1385px) {
+    font-size: 18px;
+  }
+}
+
+@mixin primaryTitleFormat {
+  color: $greenDarkColor;
+  font-family: $stolzlBold;
+  line-height: 94%;
+  letter-spacing: -0.04em;
+  font-size: 48px;
+  text-transform: uppercase;
+
+  @media screen and (max-width: 1385px) {
+    font-size: 28px;
+  }
+}
+@mixin strongTextFormat {
+  font-family: $stolzlBold;
+
+  @media screen and (max-width: 1385px) {
+    font-size: 18px;
+  }
+}
+
+@mixin positionDecorIcon {
+  position: absolute;
+  z-index: 100;
+}
+
+@mixin alignPositionElement {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin numberCardAdventCalendar($number, $color) {
+  content: $number;
+  position: absolute;
+  display: inline-block;
+  font-family: $HiraKaku;
+  color: $color;
+  letter-spacing: -0.04em;
+}
+
+@mixin ellipseLabel($color) {
+  display: inline-block;
+  @include flex_AlignBooth(center);
+  border-radius: 50%;
+  background-color: #fff6e3;
+  color: $color;
+  border: 3px solid $color;
+  font-size: 54px;
+  font-family: $stolzlBold;
+  line-height: 92%;
+  padding: 32px 28px;
+  transform: rotate(-8deg);
+  position: absolute;
+  letter-spacing: -0.04em;
+  z-index: 100;
+  white-space: nowrap;
+}
