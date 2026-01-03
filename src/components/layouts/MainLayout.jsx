@@ -1,4 +1,5 @@
-import MainBanner from '../main-banner/MainBanner';
+import MainBanner from '../sections/main-banner/MainBanner';
+import TeamsSection from '../sections/teams/TeamsSection';
 
 function MainLayout() {
   return (
@@ -6,6 +7,7 @@ function MainLayout() {
       {/* <Header /> */}
       <main>
         <MainBanner />
+        <TeamsSection />
       </main>
       {/* <Footer/> */}
     </>

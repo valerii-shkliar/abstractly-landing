@@ -1,8 +1,9 @@
-import dataContent from './../../constants/dataContent';
-import Wrapper from '../layouts/Wrapper';
-import mainBannerImage from '../../assets/images/pictures/main-banner-image.png';
+import mainBannerImage from '../../../assets/images/pictures/main-banner-image.png';
 import style from './MainBanner.module.scss';
-import Button from '../tools/Button';
+
+import Wrapper from '../../layouts/Wrapper';
+import dataContent from '../../../constants/dataContent';
+import Button from '../../tools/Button';
 
 const { mainBanner } = dataContent;
 
@@ -14,10 +15,18 @@ function MainBanner() {
           <h1 className={style.title}>{mainBanner.title}</h1>
           <p className={style.text}>{mainBanner.text}</p>
           <div className={style.btnContainer}>
-            <Button className={style.btn} kind="secondary" href="#">
+            <Button
+              classList={{ btn: style.btn, btnWrapper: style.btnWrapper }}
+              kind="secondary"
+              href="#"
+            >
               {mainBanner.btns.secondaryBtn}
             </Button>
-            <Button className={style.btn} kind="primary" href="#">
+            <Button
+              classList={{ btn: style.btn, btnWrapper: style.btnWrapper }}
+              kind="primary"
+              href="#"
+            >
               {mainBanner.btns.primaryBtn}
             </Button>
           </div>

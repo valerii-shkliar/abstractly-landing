@@ -1,41 +1,43 @@
-.btn {
-  font-family: var(--font-noto-medium);
-  border-radius: var(--radius-btn);
-  padding: var(--padding-btn);
-  border: 1px solid transparent;
-  transition: var(--transition);
+.btnWrapper {
+  .btn {
+    font-family: var(--font-noto-medium);
+    border-radius: var(--radius-btn);
+    padding: var(--padding-btn);
+    border: 1px solid transparent;
+    transition: var(--transition);
 
-  &.primary {
-    background-color: var(--color-thirdly);
-    color: var(--color-fourthly);
+    &.primary {
+      background-color: var(--color-thirdly);
+      color: var(--color-fourthly);
 
-    &:not(:disabled) {
-      &:hover {
-        background-color: var(--color-thirdly-hover);
+      &:not(:disabled) {
+        &:hover {
+          background-color: var(--color-thirdly-hover);
+        }
       }
     }
-  }
-  &.secondary {
-    background-color: var(--color-fourthly);
-    color: var(--color-primary);
-    border-color: var(--color-border-btn);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    &.secondary {
+      background-color: var(--color-fourthly);
+      color: var(--color-primary);
+      border-color: var(--color-border-btn);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.06), 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 
-    &:not(:disabled) {
-      &:hover {
-        color: var(--color-primary-hover);
-        background-color: var(--color-fourthly-hover);
+      &:not(:disabled) {
+        &:hover {
+          color: var(--color-primary-hover);
+          background-color: var(--color-fourthly-hover);
+        }
       }
     }
-  }
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 4px rgba(68, 76, 231, 0.12);
-  }
-  &:disabled {
-    background-color: var(--color-disable-btn);
-    color: var(--color-disable-text);
-    cursor: not-allowed;
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 4px rgba(68, 76, 231, 0.12);
+    }
+    &:disabled {
+      background-color: var(--color-disable-btn);
+      color: var(--color-disable-text);
+      cursor: not-allowed;
+    }
   }
 }

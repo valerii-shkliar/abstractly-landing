@@ -19,10 +19,20 @@ html {
 
 body {
   background: var(--color-bg-body);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .wrapper {
   max-width: 1408px;
   margin: auto;
+  padding: var(--padding-section);
+
+  @media screen and (max-width: 1190px) {
+    padding: var(--padding-section-tablet);
+  }
+  @media screen and (max-width: 440px) {
+    padding: var(--padding-section-mobile);
+  }
 }
 a,
 a:link,

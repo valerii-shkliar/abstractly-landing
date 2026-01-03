@@ -1,0 +1,10 @@
+@use './../../../global-styles/setup-style' as *;
+
+.brandLogo {
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 170px;
+  height: 48px;
+}

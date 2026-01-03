@@ -1,13 +1,7 @@
-import MainBanner from './components/main-banner/MainBanner';
+import MainLayout from './components/layouts/MainLayout';
 
 function App() {
-  return (
-    <>
-      <main>
-        <MainBanner />
-      </main>
-    </>
-  );
+  return <MainLayout />;
 }
 
 export default App;

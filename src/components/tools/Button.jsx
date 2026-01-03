@@ -1,8 +1,10 @@
 import clsx from 'clsx';
 import style from './Button.module.scss';
 
-function Button({ kind, className, isDisabled, href, children }) {
+function Button({ kind, classList, isDisabled, href, children }) {
+  const { btn: btnClassName, btnWrapper: btnWrapperClassName } = classList;
   let classNameKind = '';
+
   if (kind === 'primary') {
     classNameKind = style.primary;
   }
@@ -10,11 +12,12 @@ function Button({ kind, className, isDisabled, href, children }) {
     classNameKind = style.secondary;
   }
 
-  const customClass = clsx(style.btn, classNameKind, className || '');
+  const btnCustomClass = clsx(style.btn, classNameKind, btnClassName || '');
+  const btnWrapperCustomClass = clsx(style.btnWrapper, btnWrapperClassName || '');
 
   return (
-    <a>
-      <button className={customClass} href={href} disabled={isDisabled}>
+    <a className={btnWrapperCustomClass}>
+      <button className={btnCustomClass} href={href} disabled={isDisabled}>
         {children}
       </button>
     </a>
