@@ -5,7 +5,6 @@
     @include flex_center;
     justify-content: space-between;
     gap: var(--gap-contentBox);
-    background-color: var(--color-bg-content);
 
     .contentContainer {
       width: 40%;
@@ -24,10 +23,8 @@
         display: flex;
         gap: var(--gap-contentBox);
 
-        .btnWrapper {
-          .btn {
-            font-size: var(--font-size-base-lg);
-          }
+        .btn {
+          font-size: var(--font-size-base-lg);
         }
       }
     }
@@ -38,7 +35,6 @@
   @media screen and (max-width: 1190px) {
     .wrapper {
       flex-direction: column;
-      // padding: var(--padding-section-tablet);
 
       .contentContainer,
       .pictureContainer {
@@ -63,10 +59,8 @@
           font-size: var(--font-size-base-lg);
         }
         .btnContainer {
-          .btnWrapper {
-            .btn {
-              font-size: var(--font-size-base);
-            }
+          .btn {
+            font-size: var(--font-size-base);
           }
         }
       }
@@ -83,12 +77,8 @@
         .btnContainer {
           gap: var(--font-size-base);
 
-          .btnWrapper {
+          .btn {
             width: 50%;
-
-            .btn {
-              width: 100%;
-            }
           }
         }
       }

@@ -1,36 +1,43 @@
 @use './../../../global-styles/setup-style' as *;
 
 .teamsSection {
-  .wrapper {
-    background-color: var(--color-bg-content);
-    padding-left: initial;
-    padding-right: initial;
+  padding-left: initial;
+  padding-right: initial;
 
-    .description {
-      @include primaryText;
-      font-family: var(--font-noto-medium);
-      text-align: center;
-      margin-bottom: 3.5em;
-    }
-    .brandLogoList {
-      @include flex_horizonAlign(space-between);
-      gap: 5rem;
-      margin-right: 5rem;
-    }
+  .description {
+    @include primaryText;
+    font-family: var(--font-noto-medium);
+    text-align: center;
+    margin-bottom: 3.5em;
+  }
+  :global(.rfm-marquee) {
+    min-width: initial;
   }
 
-  @media screen and (max-width: 1190px) {
-    .wrapper {
-      .brandLogoList {
-        gap: 3.5rem;
+  .brandLogoList {
+    @include flex_horizonAlign(space-between);
+    gap: 5rem;
+    margin-right: 5rem;
+
+    .brandLogoContainer {
+      .brandLogo {
+        display: block;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 170px;
+        height: 48px;
       }
+    }
+  }
+  @media screen and (max-width: 1190px) {
+    .brandLogoList {
+      gap: 3.5rem;
     }
   }
   @media screen and (max-width: 440px) {
-    .wrapper {
-      .brandLogoList {
-        gap: 5.5rem;
-      }
+    .brandLogoList {
+      gap: 5.5rem;
     }
   }
 }

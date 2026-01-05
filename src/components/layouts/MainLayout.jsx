@@ -1,14 +1,8 @@
-import MainBanner from '../sections/main-banner/MainBanner';
-import TeamsSection from '../sections/teams/TeamsSection';
-
-function MainLayout() {
+function MainLayout(props) {
   return (
     <>
       {/* <Header /> */}
-      <main>
-        <MainBanner />
-        <TeamsSection />
-      </main>
+      <main>{props.children}</main>
       {/* <Footer/> */}
     </>
   );

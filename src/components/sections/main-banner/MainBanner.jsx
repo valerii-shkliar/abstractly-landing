@@ -15,18 +15,10 @@ function MainBanner() {
           <h1 className={style.title}>{mainBanner.title}</h1>
           <p className={style.text}>{mainBanner.text}</p>
           <div className={style.btnContainer}>
-            <Button
-              classList={{ btn: style.btn, btnWrapper: style.btnWrapper }}
-              kind="secondary"
-              href="#"
-            >
+            <Button className={style.btn} kind="secondary" href="#">
               {mainBanner.btns.secondaryBtn}
             </Button>
-            <Button
-              classList={{ btn: style.btn, btnWrapper: style.btnWrapper }}
-              kind="primary"
-              href="#"
-            >
+            <Button className={style.btn} kind="primary" href="#">
               {mainBanner.btns.primaryBtn}
             </Button>
           </div>

@@ -1,8 +1,7 @@
 import dataContent from './../../../constants/dataContent';
 import style from './TeamsSection.module.scss';
-import BrandLogo from './BrandLogo';
-import Wrapper from '../../layouts/Wrapper';
 import Marquee from 'react-fast-marquee';
+const fileNameRegExp = /([^/]+)(?=\.svg$)/;
 
 const { teamsSection } = dataContent;
 const images = Object.values(
@@ -12,18 +11,22 @@ const images = Object.values(
 function TeamsSection() {
   return (
     <section className={style.teamsSection}>
-      <Wrapper className={style.wrapper}>
-        <p className={style.description}>{teamsSection.description}</p>
-        <Marquee speed={30} play={true}>
-          <ul className={style.brandLogoList}>
-            {images.map((img, i) => (
-              <BrandLogo url={img} key={i} />
-            ))}
-          </ul>
-        </Marquee>
-      </Wrapper>
+      <p className={style.description}>{teamsSection.description}</p>
+      <Marquee speed={30} play={true} className={style.marquee}>
+        <div className={style.brandLogoList}>
+          {images.map((path, i) => (
+            <div className={style.brandLogoContainer} key={i}>
+              <img className={style.brandLogo} src={path} alt={generateImgAlt(path)} />
+            </div>
+          ))}
+        </div>
+      </Marquee>
     </section>
   );
+}
+
+function generateImgAlt(url) {
+  return url.match(fileNameRegExp)[0];
 }
 
 export default TeamsSection;

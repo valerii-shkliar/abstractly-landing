@@ -22,9 +22,8 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.wrapper {
-  max-width: 1408px;
-  margin: auto;
+section {
+  background-color: var(--color-bg-content);
   padding: var(--padding-section);
 
   @media screen and (max-width: 1190px) {
@@ -33,6 +32,10 @@ body {
   @media screen and (max-width: 440px) {
     padding: var(--padding-section-mobile);
   }
+}
+.wrapper {
+  max-width: 1408px;
+  margin: auto;
 }
 a,
 a:link,
