@@ -1,0 +1,36 @@
+@use './../../global-styles/setup-style' as *;
+
+.sectionHeader {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+
+  .description,
+  .title,
+  .text {
+    text-align: center;
+  }
+  .description {
+    color: var(--color-thirdly);
+    font-family: var(--font-noto-semiBold);
+    margin-bottom: 0.75rem;
+  }
+  .title {
+    @include primaryTitle;
+  }
+  .text {
+    @include primaryText;
+    font-size: var(--font-size-md);
+    margin-bottom: 4rem;
+    line-height: 1.4;
+  }
+
+  @media screen and (max-width: 730px) {
+    margin-bottom: 3rem;
+
+    .text {
+      font-size: var(--font-size-base-lg);
+      margin-bottom: 3rem;
+    }
+  }
+}

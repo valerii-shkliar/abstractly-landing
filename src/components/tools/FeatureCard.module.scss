@@ -1,0 +1,29 @@
+@use './../../global-styles/setup-style' as *;
+
+.featureCard {
+  max-width: 385px;
+  @include flex_verticalAlign(center);
+  flex-direction: column;
+
+  .icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1.25em;
+  }
+  .contentContainer {
+    .title,
+    .text {
+      text-align: center;
+    }
+    .title {
+      font-size: var(--font-size-base-lg);
+      line-height: 1.4;
+      color: var(--color-primary);
+      font-family: var(--font-noto-semiBold);
+      margin-bottom: 0.5em;
+    }
+    .text {
+      color: var(--color-secondary);
+    }
+  }
+}

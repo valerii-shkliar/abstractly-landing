@@ -11,11 +11,13 @@
 
       .title {
         @include primaryTitle;
+        margin-bottom: 0.4em;
         font-size: var(--font-size-xxl);
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
       }
       .text {
-        color: var(--color-secondary);
+        @include primaryText;
+        line-height: 1.4;
         font-size: --var(--font-size-md);
         margin-bottom: 3.2em;
       }

@@ -1,0 +1,18 @@
+@use './../../../global-styles/setup-style' as *;
+
+.easyAccess {
+  .wrapper {
+    .cardsList {
+      @include flex_horizonAlign(center);
+      gap: 4.5rem var(--gap-contentBox);
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 1190px) {
+    .wrapper {
+      .cardsList {
+        row-gap: var(--gap-contentBox);
+      }
+    }
+  }
+}
