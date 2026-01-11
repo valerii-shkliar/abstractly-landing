@@ -30,22 +30,20 @@
 @mixin primaryText {
   color: var(--color-secondary);
   font-size: var(--font-size-base);
-
-  // @media screen and (max-width: 1385px) {
-  //   font-size: 18px;
-  // }
+  font-family: var(--font-noto-regular);
+  line-height: 1.5;
 }
 
 @mixin primaryTitle {
   color: var(--color-primary);
   font-family: var(--font-noto-semiBold);
-  line-height: 100%;
+  line-height: 1;
   font-size: var(--font-size-xl);
   margin-bottom: var(--marginBottom-title);
 
-  // @media screen and (max-width: 1385px) {
-  //   font-size: 28px;
-  // }
+  @media screen and (max-width: 730px) {
+    font-size: 1.875rem;
+  }
 }
 
 @mixin alignPositionElement {

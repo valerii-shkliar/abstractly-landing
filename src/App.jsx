@@ -1,12 +1,14 @@
 import MainLayout from './components/layouts/MainLayout';
-import MainBanner from './components/sections/main-banner/MainBanner';
-import TeamsSection from './components/sections/teams/TeamsSection';
+import MainBanner from './components/sections/MainBanner/MainBanner';
+import TeamsSection from './components/sections/Teams/TeamsSection';
+import EasyAccess from './components/sections/EasyAccess/EasyAccess';
 
 function App() {
   return (
     <MainLayout>
       <MainBanner />
       <TeamsSection />
+      <EasyAccess />
     </MainLayout>
   );
 }

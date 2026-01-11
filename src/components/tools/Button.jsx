@@ -4,9 +4,9 @@ import style from './Button.module.scss';
 function Button({ kind, className, isDisabled, href, children }) {
   const btnCustomClass = clsx(
     style.btn,
-    className || '',
-    kind === 'primary' ? style.primary : '',
-    kind === 'secondary' ? style.secondary : ''
+    className,
+    kind === 'primary' && style.primary,
+    kind === 'secondary' && style.secondary
   );
 
   return (
