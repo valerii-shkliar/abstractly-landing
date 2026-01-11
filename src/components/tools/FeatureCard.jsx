@@ -3,7 +3,7 @@ import style from './FeatureCard.module.scss';
 import primaryIcons from '../../utilities/bundlePrimaryIcons';
 
 function FeatureCard({ icon, title, text, className }) {
-  const customClass = clsx(style.featureCard, className || '');
+  const customClass = clsx(style.featureCard, className);
   const PrimaryIcon = primaryIcons[icon];
 
   return (
