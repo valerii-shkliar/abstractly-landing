@@ -6,11 +6,8 @@
       @include flex_horizonAlign(center);
       gap: 4.5rem var(--gap-contentBox);
       flex-wrap: wrap;
-    }
-  }
-  @media screen and (max-width: 1190px) {
-    .wrapper {
-      .cardsList {
+
+      @media screen and (max-width: 1190px) {
         row-gap: var(--gap-contentBox);
       }
     }

@@ -1,4 +1,4 @@
-import dataContent from './../../../constants/dataContent';
+import dataContent from '../../../constants/dataContent';
 import style from './TeamsSection.module.scss';
 import Marquee from 'react-fast-marquee';
 const fileNameRegExp = /([^/]+)(?=\.svg$)/;
