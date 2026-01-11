@@ -7,6 +7,9 @@ const dataContent = {
       secondaryBtn: 'Learn more',
     },
   },
+  teamsSection: {
+    description: 'Used by teams that you love',
+  },
 };
 
 export default dataContent;

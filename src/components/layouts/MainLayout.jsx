@@ -1,12 +1,8 @@
-import MainBanner from '../main-banner/MainBanner';
-
-function MainLayout() {
+function MainLayout(props) {
   return (
     <>
       {/* <Header /> */}
-      <main>
-        <MainBanner />
-      </main>
+      <main>{props.children}</main>
       {/* <Footer/> */}
     </>
   );

@@ -1,8 +1,9 @@
-import dataContent from './../../constants/dataContent';
-import Wrapper from '../layouts/Wrapper';
-import mainBannerImage from '../../assets/images/pictures/main-banner-image.png';
+import mainBannerImage from '../../../assets/images/pictures/main-banner-image.png';
 import style from './MainBanner.module.scss';
-import Button from '../tools/Button';
+
+import Wrapper from '../../layouts/Wrapper';
+import dataContent from '../../../constants/dataContent';
+import Button from '../../tools/Button';
 
 const { mainBanner } = dataContent;
 

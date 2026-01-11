@@ -1,12 +1,13 @@
-import MainBanner from './components/main-banner/MainBanner';
+import MainLayout from './components/layouts/MainLayout';
+import MainBanner from './components/sections/main-banner/MainBanner';
+import TeamsSection from './components/sections/teams/TeamsSection';
 
 function App() {
   return (
-    <>
-      <main>
-        <MainBanner />
-      </main>
-    </>
+    <MainLayout>
+      <MainBanner />
+      <TeamsSection />
+    </MainLayout>
   );
 }
 
