@@ -10,10 +10,8 @@ const { header, cards, mainImage } = forDesignersSection;
 function ForDesigners() {
   return (
     <section>
-      <Wrapper>
-        <SectionHeader description={header.description} title={header.title} text={header.text} />
-        <CommonSectionContent cardsList={cards} image={Image} alt={mainImage} />
-      </Wrapper>
+      <SectionHeader description={header.description} title={header.title} text={header.text} />
+      <CommonSectionContent cardsList={cards} image={Image} alt={mainImage} />
     </section>
   );
 }

@@ -1,5 +1,4 @@
 import style from './FitForAll.module.scss';
-import Wrapper from '../../layouts/Wrapper';
 import SectionHeader from '../../tools/SectionHeader/SectionHeader';
 import dataContent from '../../../constants/dataContent';
 import Button from '../../tools/Button/Button';
@@ -23,31 +22,29 @@ function FitForAll() {
 
   return (
     <section className={style.fitForAll}>
-      <Wrapper className={style.wrapper}>
-        <SectionHeader description={header.description} title={header.title} text={header.text}>
-          <div className={style.btnContainer}>
-            <Button
-              className={activeBtn === 'Monthly' ? customBtnClass : style.btn}
-              href="#"
-              handleButtonClick={handleButtonClick}
-            >
-              {header.btns.monthly}
-            </Button>
-            <Button
-              className={activeBtn === 'Annually' ? customBtnClass : style.btn}
-              href="#"
-              handleButtonClick={handleButtonClick}
-            >
-              {header.btns.annually}
-            </Button>
-          </div>
-        </SectionHeader>
-        <div className={style.cardsList}>
-          {cards.map((card, i) => (
-            <PricePlanCard card={card} key={i} />
-          ))}
+      <SectionHeader description={header.description} title={header.title} text={header.text}>
+        <div className={style.btnContainer}>
+          <Button
+            className={activeBtn === 'Monthly' ? customBtnClass : style.btn}
+            href="#"
+            handleButtonClick={handleButtonClick}
+          >
+            {header.btns.monthly}
+          </Button>
+          <Button
+            className={activeBtn === 'Annually' ? customBtnClass : style.btn}
+            href="#"
+            handleButtonClick={handleButtonClick}
+          >
+            {header.btns.annually}
+          </Button>
         </div>
-      </Wrapper>
+      </SectionHeader>
+      <div className={style.cardsList}>
+        {cards.map((card, i) => (
+          <PricePlanCard card={card} key={i} />
+        ))}
+      </div>
     </section>
   );
 }

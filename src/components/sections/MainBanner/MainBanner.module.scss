@@ -1,87 +1,80 @@
 @use './../../../global-styles/setup-style' as *;
 
 .mainBanner {
-  .wrapper {
-    @include flex_center;
-    justify-content: space-between;
-    gap: var(--gap-contentBox);
+  @include flex_center;
+  justify-content: space-between;
+  gap: var(--gap-contentBox);
 
-    .contentContainer {
-      width: 40%;
+  .contentContainer {
+    width: 40%;
 
-      .title {
-        @include primaryTitle;
-        margin-bottom: 0.4em;
-        font-size: var(--font-size-xxl);
-        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-      }
-      .text {
-        @include primaryText;
-        line-height: 1.4;
-        font-size: --var(--font-size-md);
-        margin-bottom: 3.2em;
-      }
-      .btnContainer {
-        display: flex;
-        gap: var(--gap-contentBox);
-
-        .btn {
-          font-size: var(--font-size-base-lg);
-        }
-      }
+    .title {
+      @include primaryTitle;
+      margin-bottom: 0.4em;
+      font-size: var(--font-size-xxl);
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     }
-    .pictureContainer {
-      width: 60%;
+    .text {
+      @include primaryText;
+      line-height: 1.4;
+      font-size: --var(--font-size-md);
+      margin-bottom: 3.2em;
+    }
+    .btnContainer {
+      display: flex;
+      gap: var(--gap-contentBox);
+
+      .btn {
+        font-size: var(--font-size-base-lg);
+      }
     }
   }
+  .pictureContainer {
+    width: 60%;
+  }
+
   @media screen and (max-width: 1190px) {
-    .wrapper {
-      flex-direction: column;
+    flex-direction: column;
 
-      .contentContainer,
-      .pictureContainer {
-        width: initial;
-      }
+    .contentContainer,
+    .pictureContainer {
+      width: initial;
+    }
 
-      .contentContainer {
-        .title {
-          font-size: var(--font-size-xl);
-          text-shadow: initial;
-        }
+    .contentContainer {
+      .title {
+        font-size: var(--font-size-xl);
+        text-shadow: initial;
       }
     }
   }
   @media screen and (max-width: 730px) {
-    .wrapper {
-      .contentContainer {
-        .title {
-          font-size: 2.25rem;
-        }
-        .text {
-          font-size: var(--font-size-base-lg);
-        }
-        .btnContainer {
-          .btn {
-            font-size: var(--font-size-base);
-          }
+    .contentContainer {
+      .title {
+        font-size: 2.25rem;
+      }
+      .text {
+        font-size: var(--font-size-base-lg);
+      }
+      .btnContainer {
+        .btn {
+          font-size: var(--font-size-base);
         }
       }
-      .pictureContainer {
-        .picture {
-          width: 100%;
-        }
+    }
+    .pictureContainer {
+      .picture {
+        width: 100%;
       }
     }
   }
   @media screen and (max-width: 440px) {
-    .wrapper {
-      .contentContainer {
-        .btnContainer {
-          gap: var(--font-size-base);
+    .contentContainer {
+      .btnContainer {
+        gap: var(--font-size-base);
 
-          .btn {
-            width: 50%;
-          }
+        .btn {
+          width: 50%;
         }
       }
     }
