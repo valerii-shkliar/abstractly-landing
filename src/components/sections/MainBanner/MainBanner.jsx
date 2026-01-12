@@ -27,8 +27,6 @@ function MainBanner() {
           <img
             src={mainBannerImage}
             alt="main-banner-image"
-            width={696}
-            height={526}
             className={style.picture}
             loading="lazy"
           />

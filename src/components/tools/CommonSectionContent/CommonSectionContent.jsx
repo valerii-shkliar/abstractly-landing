@@ -20,14 +20,7 @@ function CommonSectionContent({ cardsList, image, alt, className }) {
         ))}
       </div>
       <div className={style.pictureContainer}>
-        <img
-          src={image}
-          alt={alt}
-          width={592}
-          height={394}
-          className={style.picture}
-          loading="lazy"
-        />
+        <img src={image} alt={alt} className={style.picture} loading="lazy" />
       </div>
     </div>
   );
