@@ -1,0 +1,14 @@
+@use './../../../global-styles/setup-style' as *;
+
+.forDesigners {
+  .wrapper {
+    .sectionBody {
+    }
+  }
+  @media screen and (max-width: 1190px) {
+    .wrapper {
+      .sectionBody {
+      }
+    }
+  }
+}

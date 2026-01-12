@@ -37,11 +37,18 @@
   --padding-section: 6rem;
   --padding-section-tablet: 4rem 1rem;
   --padding-section-mobile: 3rem 1rem;
+  --padding-card: 2rem;
   --gap-contentBox: 2rem;
 
   --radius-btn: 4px;
+  --radius-picture: 4px;
+  --radius-card: 8px;
   --padding-btn: 0.625em 1.125em;
+  --marginBottom-container: 2rem;
   --marginBottom-title: 1.25rem;
+  --marginBottom-small: 0.5rem;
+
+  --border: 1px solid var(--color-border-btn);
 
   --transition: 0.4s ease;
 }

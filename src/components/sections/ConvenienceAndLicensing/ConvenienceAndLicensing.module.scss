@@ -1,0 +1,16 @@
+@use './../../../global-styles/setup-style' as *;
+
+.forDesigners {
+  .wrapper {
+    .sectionBody {
+      flex-direction: row-reverse;
+    }
+  }
+  @media screen and (max-width: 1190px) {
+    .wrapper {
+      .sectionBody {
+        flex-direction: column;
+      }
+    }
+  }
+}

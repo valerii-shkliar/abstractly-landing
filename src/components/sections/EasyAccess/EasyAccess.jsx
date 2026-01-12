@@ -2,8 +2,8 @@ import style from './EasyAccess.module.scss';
 
 import Wrapper from '../../layouts/Wrapper';
 import dataContent from '../../../constants/dataContent';
-import SectionHeader from '../../tools/SectionHeader';
-import FeatureCard from '../../tools/FeatureCard';
+import SectionHeader from '../../tools/SectionHeader/SectionHeader';
+import FeatureCard from '../../tools/FeatureCard/FeatureCard';
 
 const { easyAccessSection } = dataContent;
 const { header, cards } = easyAccessSection;

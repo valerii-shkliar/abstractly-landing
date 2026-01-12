@@ -3,7 +3,7 @@ import style from './MainBanner.module.scss';
 
 import Wrapper from '../../layouts/Wrapper';
 import dataContent from '../../../constants/dataContent';
-import Button from '../../tools/Button';
+import Button from '../../tools/Button/Button';
 
 const { mainBanner } = dataContent;
 
