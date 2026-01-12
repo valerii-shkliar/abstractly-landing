@@ -1,0 +1,98 @@
+@use './../../../global-styles/setup-style' as *;
+
+.pricePlanCard {
+  border: var(--border);
+  border-radius: var(--radius-card);
+  width: calc(100% / 3);
+
+  &:not(.priority) {
+    .cardBody {
+      height: 100%;
+    }
+  }
+
+  .cardBody {
+    padding: var(--padding-card);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-contentBox);
+
+    .descriptionContainer {
+      .title {
+        @include primaryTitle;
+        line-height: 1.33;
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--marginBottom-small);
+      }
+      .description {
+        @include primaryText;
+      }
+    }
+    .priceContainer {
+      .cost {
+        @include primaryTitle;
+        display: inline-block;
+        margin-right: 0.125rem;
+        margin-bottom: var(--marginBottom-small);
+      }
+      .period {
+        @include primaryText;
+        color: var(--color-primary);
+        display: inline-block;
+
+        &::before {
+          content: '/';
+          margin-right: 0.125rem;
+          @include primaryText;
+        }
+      }
+      .description {
+        @include primaryText;
+      }
+    }
+    .peculiaritiesContainer {
+      min-height: 180px;
+    }
+    .btn {
+      width: 100%;
+      margin-top: auto;
+    }
+  }
+
+  &.priority {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid #4f46e5;
+
+    .priorityTitle {
+      color: var(--color-thirdly);
+      padding: 1rem;
+      background-color: var(--color-bg-light);
+      text-align: center;
+      font-family: var(--font-noto-bold);
+      font-size: var(--font-size-md);
+      border-top-left-radius: var(--radius-card);
+      border-top-right-radius: var(--radius-card);
+    }
+
+    .priceContainer {
+      .cost {
+        color: var(--color-thirdly);
+      }
+      .period {
+        color: var(--color-thirdly);
+
+        &::before {
+          color: var(--color-thirdly);
+        }
+      }
+    }
+    .btn {
+      color: var(--color-fourthly);
+      background-color: var(--color-thirdly);
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+  }
+}

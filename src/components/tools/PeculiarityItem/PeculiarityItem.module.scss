@@ -1,0 +1,20 @@
+@use './../../../global-styles/setup-style' as *;
+
+.container {
+  @include flex_verticalAlign(center);
+  gap: 0.75rem;
+  margin-bottom: var(--marginBottom-title);
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .text {
+    @include primaryText;
+  }
+
+  &:last-child {
+    margin-bottom: initial;
+  }
+}

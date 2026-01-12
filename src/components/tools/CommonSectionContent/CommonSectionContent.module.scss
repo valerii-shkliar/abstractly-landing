@@ -1,0 +1,34 @@
+@use './../../../global-styles/setup-style' as *;
+
+.sectionBody {
+  @include flex_center;
+  gap: var(--gap-contentBox);
+
+  .cardsList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 50%;
+  }
+  .pictureContainer {
+    .picture {
+      box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      border-radius: var(--radius-picture);
+    }
+  }
+
+  @media screen and (max-width: 1190px) {
+    flex-direction: column;
+
+    .cardsList {
+      width: 100%;
+    }
+
+    .pictureContainer {
+      .picture {
+        width: 100%;
+        object-fit: none;
+      }
+    }
+  }
+}
