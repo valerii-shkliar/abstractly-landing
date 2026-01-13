@@ -21,6 +21,11 @@
   display: flex;
   justify-content: $position;
 }
+@mixin flex_BothAlign($positionX, $positionY) {
+  display: flex;
+  justify-content: $positionX;
+  align-items: $positionY;
+}
 @mixin flex_center {
   display: flex;
   justify-content: center;

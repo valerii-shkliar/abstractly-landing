@@ -1,0 +1,50 @@
+@use './../../../global-styles/setup-style' as *;
+
+.itemFAQ {
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
+
+  .question {
+    @include flex_BothAlign(space-between, center);
+    font-size: var(--font-size-base-lg);
+    line-height: 1.56;
+    font-family: var(--font-noto-medium);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: var(--transition);
+    padding-top: 1.75rem;
+    padding-bottom: var(--marginBottom-small);
+
+    &::after {
+      @include before_after('../../../assets/images/icons/open.svg', 24px);
+      transition: var(--transition);
+    }
+
+    &:hover {
+      background-color: var(--color-bg-light);
+    }
+  }
+
+  .answer {
+    @include primaryText;
+    overflow: hidden;
+    padding: 0;
+    max-height: 0px;
+    transition: var(--transition);
+  }
+
+  &.open {
+    .question {
+      &::after {
+        background-image: url('../../../assets/images/icons/close.svg');
+      }
+    }
+    .answer {
+      max-height: 150px;
+      padding-bottom: 1.75rem;
+    }
+  }
+  &:last-child {
+    border-bottom: transparent;
+  }
+}

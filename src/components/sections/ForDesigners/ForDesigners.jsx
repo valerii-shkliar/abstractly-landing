@@ -1,5 +1,4 @@
 import Image from '../../../assets/images/pictures/for-designers-image.png';
-import Wrapper from '../../layouts/Wrapper';
 import SectionHeader from '../../tools/SectionHeader/SectionHeader';
 import dataContent from '../../../constants/dataContent';
 import CommonSectionContent from '../../tools/CommonSectionContent/CommonSectionContent';
