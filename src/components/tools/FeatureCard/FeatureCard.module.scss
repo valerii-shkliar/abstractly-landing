@@ -1,4 +1,4 @@
-@use './../../global-styles/setup-style' as *;
+@use './../../../global-styles/setup-style' as *;
 
 .featureCard {
   max-width: 385px;
@@ -8,7 +8,8 @@
   .icon {
     width: 48px;
     height: 48px;
-    margin-bottom: 1.25em;
+    margin-bottom: var(--marginBottom-title);
+    flex-shrink: 0;
   }
   .contentContainer {
     .title,
@@ -24,6 +25,29 @@
     }
     .text {
       color: var(--color-secondary);
+    }
+  }
+
+  &.row {
+    max-width: initial;
+    flex-direction: row;
+    gap: 1.25rem;
+
+    .icon {
+      align-self: flex-start;
+    }
+    .contentContainer {
+      padding-top: 0.625rem;
+      padding-bottom: 0.625rem;
+
+      .title,
+      .text {
+        text-align: initial;
+      }
+      .title {
+      }
+      .text {
+      }
     }
   }
 }

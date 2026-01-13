@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import style from './FeatureCard.module.scss';
-import primaryIcons from '../../utilities/bundlePrimaryIcons';
+import primaryIcons from '../../../constants/bundlePrimaryIcons';
 
-function FeatureCard({ icon, title, text, className }) {
-  const customClass = clsx(style.featureCard, className);
+function FeatureCard({ icon, title, text, className, row }) {
+  const customClass = clsx(style.featureCard, className, row && style.row);
   const PrimaryIcon = primaryIcons[icon];
 
   return (
