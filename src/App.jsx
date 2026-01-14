@@ -5,6 +5,7 @@ import EasyAccess from './components/sections/EasyAccess/EasyAccess';
 import ForDesigners from './components/sections/ForDesigners/ForDesigners';
 import ConvenienceAndLicensing from './components/sections/ConvenienceAndLicensing/ConvenienceAndLicensing';
 import FitForAll from './components/sections/FitForAll/FitForAll';
+import FrequentlyAsked from './components/sections/FrequentlyAsked/FrequentlyAsked';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <ForDesigners />
       <ConvenienceAndLicensing />
       <FitForAll />
+      <FrequentlyAsked />
     </MainLayout>
   );
 }
