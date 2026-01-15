@@ -1,9 +1,11 @@
 .btn {
   font-family: var(--font-noto-medium);
   border-radius: var(--radius-btn);
+  font-size: var(--font-size-base);
   padding: var(--padding-btn);
   border: 1px solid transparent;
   transition: var(--transition);
+  text-wrap: nowrap;
 
   &.primary {
     background-color: var(--color-thirdly);
@@ -27,6 +29,12 @@
         background-color: var(--color-fourthly-hover);
       }
     }
+  }
+  &.burger,
+  &.close {
+    padding: initial;
+    box-shadow: none;
+    border: none;
   }
 
   &:focus {
