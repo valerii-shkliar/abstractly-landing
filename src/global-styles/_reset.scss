@@ -21,8 +21,11 @@ body {
   background: var(--color-bg-body);
   padding-left: 1rem;
   padding-right: 1rem;
+  overflow-x: hidden;
 }
-section {
+section,
+header,
+footer {
   background-color: var(--color-bg-content);
   padding: var(--padding-section);
 

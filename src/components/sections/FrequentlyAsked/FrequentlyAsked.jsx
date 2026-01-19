@@ -4,11 +4,8 @@ import dataContent from '../../../constants/dataContent';
 import ItemFAQ from '../../tools/ItemFAQ/ItemFAQ';
 import Button from '../../tools/Button/Button.jsx';
 
-const wordsRegExp = /(customer support)/;
 const { frequentlyAskedSection } = dataContent;
 const { header, listFAQ, support } = frequentlyAskedSection;
-const splittedText = support.text.split(wordsRegExp);
-const linkedText = splittedText[1];
 
 function FrequentlyAsked() {
   return (
@@ -25,15 +22,11 @@ function FrequentlyAsked() {
         <div className={style.content}>
           <h5 className={style.title}>{support.title}</h5>
           <p className={style.text}>
-            {splittedText.map((text, i) => {
-              return text === linkedText ? (
-                <a key={i} className={style.link} href="#">
-                  {linkedText}
-                </a>
-              ) : (
-                text
-              );
-            })}
+            Reach out to our{' '}
+            <a className={style.link} href="#">
+              customer support
+            </a>{' '}
+            team.
           </p>
         </div>
         <Button kind="primary" className={style.btn}>

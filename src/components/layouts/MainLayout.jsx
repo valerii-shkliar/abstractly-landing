@@ -1,9 +1,10 @@
+import Header from '../sections/Header/Header';
 import FeatureWrapper from './FeatureWrapper';
 
 function MainLayout(props) {
   return (
     <FeatureWrapper>
-      {/* <Header /> */}
+      <Header />
       <main>{props.children}</main>
       {/* <Footer/> */}
     </FeatureWrapper>

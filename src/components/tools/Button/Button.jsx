@@ -5,10 +5,10 @@ function Button({
   kind = 'secondary',
   className,
   isDisabled,
-  href,
+  type = 'button',
+  href = '#',
   children,
   handleButtonClick,
-  type = 'button',
 }) {
   const btnCustomClass = clsx(
     style.btn,
