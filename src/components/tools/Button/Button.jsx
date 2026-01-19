@@ -13,9 +13,7 @@ function Button({
     style.btn,
     className,
     kind === 'primary' && style.primary,
-    kind === 'secondary' && style.secondary,
-    kind === 'burger' && style.burger,
-    kind === 'close' && style.close
+    kind === 'secondary' && style.secondary
   );
 
   return (

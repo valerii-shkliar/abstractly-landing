@@ -29,14 +29,14 @@ function Header() {
 
   return (
     <header className={style.header}>
-      <a href="#" className={style.logoContainer}>
+      <button href="#" className={style.logoContainer}>
         <img className={style.logoImg} width={32} height={32} src={logo} alt="logo" />
         <span className={style.logoTitle}>{header.title}</span>
-      </a>
+      </button>
       <div className={customClass}>
-        <Button kind="close" handleButtonClick={handleCloseClick} className={style.closeBtn}>
+        <a onClick={handleCloseClick} className={style.closeBtn}>
           <CloseButton className={style.closeIcon} />
-        </Button>
+        </a>
         <nav className={style.nav}>
           <ul className={style.navList}>
             {header.navList.map((navItem, i) => (
@@ -51,9 +51,9 @@ function Header() {
           <Button kind="primary">{header.btns.primaryBtn}</Button>
         </div>
       </div>
-      <Button kind="burger" handleButtonClick={handleBurgerClick} className={style.burgerBtn}>
+      <button onClick={handleBurgerClick} className={style.burgerBtn}>
         <HamburgerButton className={style.burgerIcon} />
-      </Button>
+      </button>
     </header>
   );
 }
