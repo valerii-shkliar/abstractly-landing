@@ -23,7 +23,14 @@ function TalkToOurTeam() {
   return (
     <section className={style.talkToOurTeam}>
       <div className={style.contentContainer}>
-        <SectionHeader title={header.title} text={header.text} className={style.header} />
+        <SectionHeader
+          title={header.title}
+          text={header.text}
+          className={style.header}
+          classNameSectionHeader={style.sectionHeader}
+          classNameTitle={style.title}
+          classNameText={style.text}
+        />
         <address className={style.contactsContainer}>
           <div className={style.contactItem}>
             <a className={style.contactText}>

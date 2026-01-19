@@ -18,7 +18,6 @@ function App() {
       <ConvenienceAndLicensing />
       <FitForAll />
       <FrequentlyAsked />
-
       <TalkToOurTeam />
     </MainLayout>
   );

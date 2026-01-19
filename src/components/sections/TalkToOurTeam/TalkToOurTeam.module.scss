@@ -7,19 +7,21 @@
   .contentContainer {
     width: 50%;
 
-    .header {
+    .sectionHeader {
       margin: initial;
       margin-bottom: 3rem;
       width: 100%;
 
-      :global(._title_jei7i_254) {
+      .title {
         font-size: 3.75rem;
         text-align: initial;
       }
-      :global(._text_jei7i_255) {
+
+      .text {
         text-align: initial;
       }
     }
+
     .contactsContainer {
       display: flex;
       flex-direction: column;
@@ -49,7 +51,9 @@
     flex-wrap: wrap;
     border: var(--border);
     border-radius: var(--radius-card);
-    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 4px 6px -2px rgba(0, 0, 0, 0.05),
+      0 10px 15px -3px rgba(0, 0, 0, 0.1);
 
     .inputsContainer {
       @include flex_verticalAlign(center);
@@ -71,10 +75,7 @@
         resize: none;
       }
 
-      :global(._errorMessage_8qwwp_289) {
-        bottom: 0;
-      }
-      :global(._hintMessage_8qwwp_277) {
+      :global(span) {
         bottom: 0;
       }
     }
@@ -86,6 +87,13 @@
   @media screen and (max-width: 1190px) {
     flex-direction: column;
     gap: 4rem;
+    .contentContainer {
+      .sectionHeader {
+        .title {
+          font-size: var(--font-size-xl);
+        }
+      }
+    }
 
     .contentContainer,
     .form {
@@ -94,9 +102,12 @@
   }
   @media screen and (max-width: 730px) {
     .contentContainer {
-      .header {
-        :global(._title_jei7i_254) {
+      .sectionHeader {
+        .title {
           font-size: 2.25rem;
+        }
+        .text {
+          font-size: var(--font-size-base-lg);
         }
       }
     }
