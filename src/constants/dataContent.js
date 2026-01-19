@@ -207,7 +207,34 @@ const dataContent = {
     },
   },
   finestCuratedAbstractsSection: {},
-  talkToOurTeam: {},
+  talkToOurTeam: {
+    header: {
+      title: 'Talk to our team',
+      text: 'We`re committed to delivering the support you require to make your experience as smooth as possible.',
+    },
+    contacts: {
+      address: '123 Maple Street, Springfield, IL, USA',
+      phone: '+1 (650) 555-0198',
+      email: 'hello@abstractly.com',
+    },
+    form: {
+      inputs: {
+        name: {
+          label: 'Name',
+          placeholder: 'Your name',
+        },
+        email: {
+          label: 'Email',
+          placeholder: 'example@example.com',
+        },
+        message: {
+          label: 'Message',
+          placeholder: 'Write your message...',
+        },
+      },
+      btn: 'Submit',
+    },
+  },
 };
 
 export default dataContent;

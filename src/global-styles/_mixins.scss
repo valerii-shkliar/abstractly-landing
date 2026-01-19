@@ -56,3 +56,14 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin input {
+  font-size: var(--font-size-sm);
+  padding: 0.656em 0.875em;
+  border: var(--border);
+  border-radius: var(--radius-btn);
+
+  &::placeholder {
+    color: #737373;
+  }
+}
