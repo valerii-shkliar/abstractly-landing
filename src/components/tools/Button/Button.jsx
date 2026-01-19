@@ -1,7 +1,14 @@
 import clsx from 'clsx';
 import style from './Button.module.scss';
 
-function Button({ kind = 'secondary', className, isDisabled, href, children, handleButtonClick }) {
+function Button({
+  kind = 'secondary',
+  className,
+  isDisabled,
+  href = '#',
+  children,
+  handleButtonClick,
+}) {
   const btnCustomClass = clsx(
     style.btn,
     className,

@@ -1,4 +1,12 @@
 const dataContent = {
+  header: {
+    title: 'Abstractly',
+    navList: ['Home', 'Features', 'Pricing', 'About us', 'Contact'],
+    btns: {
+      primaryBtn: 'See pricing',
+      secondaryBtn: 'Learn more',
+    },
+  },
   mainBanner: {
     title: 'Well crafted abstract images',
     text: 'High quality abstract images for your projects, wallpaper and presentations.',

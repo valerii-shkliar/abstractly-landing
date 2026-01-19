@@ -4,6 +4,8 @@
   @include flex_center;
   justify-content: space-between;
   gap: var(--gap-contentBox);
+  border-top-left-radius: var(--radius-section);
+  border-top-right-radius: var(--radius-section);
 
   .contentContainer {
     width: 40%;
