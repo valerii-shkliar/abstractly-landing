@@ -6,6 +6,7 @@ import ForDesigners from './components/sections/ForDesigners/ForDesigners';
 import ConvenienceAndLicensing from './components/sections/ConvenienceAndLicensing/ConvenienceAndLicensing';
 import FitForAll from './components/sections/FitForAll/FitForAll';
 import FrequentlyAsked from './components/sections/FrequentlyAsked/FrequentlyAsked';
+import TalkToOurTeam from './components/sections/TalkToOurTeam/TalkToOurTeam';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <ConvenienceAndLicensing />
       <FitForAll />
       <FrequentlyAsked />
+      <TalkToOurTeam />
     </MainLayout>
   );
 }

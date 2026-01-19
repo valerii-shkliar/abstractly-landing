@@ -5,6 +5,7 @@ function Button({
   kind = 'secondary',
   className,
   isDisabled,
+  type = 'button',
   href = '#',
   children,
   handleButtonClick,
@@ -22,6 +23,7 @@ function Button({
       href={href}
       disabled={isDisabled}
       onClick={handleButtonClick}
+      type={type}
     >
       {children}
     </button>
