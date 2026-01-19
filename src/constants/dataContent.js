@@ -222,14 +222,18 @@ const dataContent = {
         name: {
           label: 'Name',
           placeholder: 'Your name',
+          hint: 'Enter your real name',
         },
         email: {
           label: 'Email',
           placeholder: 'example@example.com',
+          hint: 'Enter your email',
         },
         message: {
           label: 'Message',
           placeholder: 'Write your message...',
+          hint: 'Write here your question',
+          maxLength: '500',
         },
       },
       btn: 'Submit',

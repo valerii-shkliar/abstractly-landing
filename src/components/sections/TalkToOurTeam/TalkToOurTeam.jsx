@@ -1,3 +1,5 @@
+import { Formik, Form } from 'formik';
+import { validationSchema, initialValues } from '../../../constants/formData';
 import style from './TalkToOurTeam.module.scss';
 import Button from '../../tools/Button/Button';
 import SectionHeader from '../../tools/SectionHeader/SectionHeader';
@@ -5,15 +7,19 @@ import dataContent from '../../../constants/dataContent';
 import House from '../../../assets/images/icons/house.svg?react';
 import Phone from '../../../assets/images/icons/phone.svg?react';
 import Letter from '../../../assets/images/icons/letter.svg?react';
-import clsx from 'clsx';
+import InputBox from '../../tools/InputBox/InputBox';
 
-const MAX_LENGTH_TEXTAREA = 500;
 const { talkToOurTeam } = dataContent;
 const { header, contacts, form } = talkToOurTeam;
 const { inputs, btn } = form;
 const { name, email, message } = inputs;
 
 function TalkToOurTeam() {
+  function handleFormSubmit(values, { resetForm }) {
+    console.log('Submitted values:', values);
+    resetForm();
+  }
+
   return (
     <section className={style.talkToOurTeam}>
       <div className={style.contentContainer}>
@@ -39,49 +45,52 @@ function TalkToOurTeam() {
           </div>
         </address>
       </div>
-      <form className={style.form} action="GET">
-        <div className={style.inputsContainer}>
-          <div className={style.inputContainer}>
-            <label htmlFor="inputName" className={style.label}>
-              {name.label}
-            </label>
-            <input
-              type="text"
-              id="inputName"
+      <Formik
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleFormSubmit}
+      >
+        <Form className={style.form} action="POST">
+          <div className={style.inputsContainer}>
+            <InputBox
+              classNameBox={style.inputContainer}
+              classNameInput={style.input}
+              name="name"
               placeholder={name.placeholder}
-              className={style.input}
+              id="inputName"
+              type="text"
+              label={name.label}
+              hint={name.hint}
             />
-          </div>
-          <div className={style.inputContainer}>
-            <label htmlFor="inputEmail" className={style.label}>
-              {email.label}
-            </label>
-            <input
-              type="email"
-              id="inputEmail"
+            <InputBox
+              classNameBox={style.inputContainer}
+              classNameInput={style.input}
+              name="email"
               placeholder={email.placeholder}
-              className={style.input}
+              id="inputEmail"
+              label={email.label}
+              type="email"
+              hint={email.hint}
             />
           </div>
-        </div>
 
-        <div className={style.textareaContainer}>
-          <label htmlFor="inputMessage" className={style.label}>
-            {message.label}
-          </label>
-          <textarea
-            type="email"
+          <InputBox
+            classNameBox={style.textareaContainer}
+            classNameInput={style.textarea}
+            name="message"
             id="inputMessage"
             placeholder={message.placeholder}
-            className={style.input}
-            maxLength={MAX_LENGTH_TEXTAREA}
+            label={message.label}
+            hint={message.hint}
+            maxLength={message.maxLength}
+            kindItem="textarea"
           />
-          <span className={style.limit}>{`0/${MAX_LENGTH_TEXTAREA}`}</span>
-        </div>
-        <Button kind="primary" className={style.btn}>
-          {btn}
-        </Button>
-      </form>
+
+          <Button kind="primary" className={style.btn} type="submit">
+            {btn}
+          </Button>
+        </Form>
+      </Formik>
     </section>
   );
 }

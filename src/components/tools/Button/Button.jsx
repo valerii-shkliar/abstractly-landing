@@ -1,7 +1,15 @@
 import clsx from 'clsx';
 import style from './Button.module.scss';
 
-function Button({ kind = 'secondary', className, isDisabled, href, children, handleButtonClick }) {
+function Button({
+  kind = 'secondary',
+  className,
+  isDisabled,
+  href,
+  children,
+  handleButtonClick,
+  type = 'button',
+}) {
   const btnCustomClass = clsx(
     style.btn,
     className,
@@ -15,6 +23,7 @@ function Button({ kind = 'secondary', className, isDisabled, href, children, han
       href={href}
       disabled={isDisabled}
       onClick={handleButtonClick}
+      type={type}
     >
       {children}
     </button>
