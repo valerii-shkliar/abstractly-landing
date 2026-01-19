@@ -1,0 +1,51 @@
+@use './../../../global-styles/setup-style' as *;
+
+.getTheFinestCurated {
+  @include flex_center;
+  gap: var(--gap-contentBox);
+
+  .contentContainer {
+    width: 50%;
+
+    .title {
+      @include primaryTitle;
+      margin-bottom: 4rem;
+    }
+
+    .peculiaritiesContainer {
+      margin-bottom: 3rem;
+    }
+
+    .text {
+      @include primaryText;
+    }
+  }
+
+  .pictureContainer {
+    .picture {
+      border-radius: var(--radius-picture);
+    }
+  }
+
+  @media screen and (max-width: 1190px) {
+    flex-direction: column;
+
+    .contentContainer {
+      width: 100%;
+    }
+
+    .pictureContainer {
+      .picture {
+        width: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 730px) {
+    .contentContainer {
+      .title {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
