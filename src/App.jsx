@@ -7,6 +7,7 @@ import ConvenienceAndLicensing from './components/sections/ConvenienceAndLicensi
 import FitForAll from './components/sections/FitForAll/FitForAll';
 import FrequentlyAsked from './components/sections/FrequentlyAsked/FrequentlyAsked';
 import GetTheFinestCurated from './components/sections/GetTheFinestCurated/GetTheFinestCurated';
+import TalkToOurTeam from './components/sections/TalkToOurTeam/TalkToOurTeam';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <FitForAll />
       <FrequentlyAsked />
       <GetTheFinestCurated />
+      <TalkToOurTeam />
     </MainLayout>
   );
 }

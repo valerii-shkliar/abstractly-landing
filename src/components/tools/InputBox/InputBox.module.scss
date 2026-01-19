@@ -1,0 +1,26 @@
+@use './../../../global-styles/setup-style' as *;
+
+.inputContainer {
+  padding-bottom: 2rem;
+  position: relative;
+
+  .label {
+    @include label;
+  }
+  .input {
+    @include input;
+    width: 100%;
+  }
+
+  @include error_hint;
+  .limit {
+    text-align: right;
+    color: #737373;
+    font-size: var(--font-size-sm);
+    display: block;
+
+    &.error {
+      color: #dc2626;
+    }
+  }
+}
