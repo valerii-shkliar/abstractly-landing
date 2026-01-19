@@ -216,6 +216,9 @@ const dataContent = {
   },
   finestCuratedAbstractsSection: {},
   talkToOurTeam: {},
+  footer: {
+    copyright: '© 2024 Abstractly, Inc. All rights reserved.',
+  },
 };
 
 export default dataContent;
