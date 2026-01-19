@@ -1,5 +1,5 @@
 import { Formik, Form } from 'formik';
-import { validationSchema, initialValues } from '../../../constants/formData';
+import { validationSchema, initialValues } from '../../../constants/formDataTalkToOurTeam';
 import style from './TalkToOurTeam.module.scss';
 import Button from '../../tools/Button/Button';
 import SectionHeader from '../../tools/SectionHeader/SectionHeader';

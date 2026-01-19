@@ -11,10 +11,8 @@ const socials = Object.values(
     import: 'default',
     eager: true,
     query: '?react',
-  })
+  }),
 );
-
-console.log(socials);
 
 function Footer() {
   return (

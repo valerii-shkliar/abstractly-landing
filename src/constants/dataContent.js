@@ -228,6 +228,7 @@ const dataContent = {
     form: {
       input: {
         placeholder: 'Enter your email',
+        hint: 'Enter your email',
       },
       btn: 'Subscribe',
     },
