@@ -233,12 +233,6 @@ const dataContent = {
       btn: 'Subscribe',
     },
   },
-
-  talkToOurTeam: {},
-  footer: {
-    copyright: '© 2024 Abstractly, Inc. All rights reserved.',
-  },
-  finestCuratedAbstractsSection: {},
   talkToOurTeam: {
     header: {
       title: 'Talk to our team',
@@ -270,6 +264,16 @@ const dataContent = {
       },
       btn: 'Submit',
     },
+  },
+  footer: {
+    socials: [
+      { title: 'youtube', href: 'src/assets/images/socials/youtube.svg' },
+      { title: 'instagram', href: 'src/assets/images/socials/instagram.svg' },
+      { title: 'facebook', href: 'src/assets/images/socials/facebook.svg' },
+      { title: 'github', href: 'src/assets/images/socials/github.svg' },
+      { title: 'x', href: 'src/assets/images/socials/x.svg' },
+    ],
+    copyright: '© 2024 Abstractly, Inc. All rights reserved.',
   },
 };
 

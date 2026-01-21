@@ -1,18 +1,8 @@
 import style from './Footer.module.scss';
 import dataContent from '../../../constants/dataContent';
-import clsx from 'clsx';
-import { generateImgAlt } from '../../../utilities/generateImgAlt';
-// import generateImgAlt from '../../../constants/bundlePrimaryIcons';
 
 const { header } = dataContent;
 const { footer } = dataContent;
-const socials = Object.values(
-  import.meta.glob('/src/assets/images/socials/*.svg', {
-    import: 'default',
-    eager: true,
-    query: '?react',
-  }),
-);
 
 function Footer() {
   return (
@@ -28,15 +18,9 @@ function Footer() {
         })}
       </ul>
       <div className={style.socialsContainer}>
-        {socials.map((Social, i) => (
-          <a
-            className={style.socialItem}
-            key={i}
-            title={Social.name.replace('Svg', '')}
-            href="#"
-            target="_blank"
-          >
-            <Social className={style.icon} />
+        {footer.socials.map((social, i) => (
+          <a className={style.socialItem} key={i} title={social.title} href="#" target="_blank">
+            <img src={social.href} alt={social.title} />
           </a>
         ))}
       </div>
