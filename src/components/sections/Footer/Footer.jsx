@@ -1,8 +1,20 @@
 import style from './Footer.module.scss';
 import dataContent from '../../../constants/dataContent';
+import facebookIcon from '../../../assets/images/socials/facebook.svg';
+import githubIcon from '../../../assets/images/socials/github.svg';
+import instagramIcon from '../../../assets/images/socials/instagram.svg';
+import xIcon from '../../../assets/images/socials/x.svg';
+import youtubeIcon from '../../../assets/images/socials/youtube.svg';
 
 const { header } = dataContent;
 const { footer } = dataContent;
+const iconsList = {
+  facebook: facebookIcon,
+  github: githubIcon,
+  instagram: instagramIcon,
+  x: xIcon,
+  youtube: youtubeIcon,
+};
 
 function Footer() {
   return (
@@ -19,8 +31,14 @@ function Footer() {
       </ul>
       <div className={style.socialsContainer}>
         {footer.socials.map((social, i) => (
-          <a className={style.socialItem} key={i} title={social.title} href="#" target="_blank">
-            <img src={social.href} alt={social.title} />
+          <a
+            className={style.socialItem}
+            key={i}
+            title={social.title}
+            href={social.href}
+            target="_blank"
+          >
+            <img src={iconsList[social.title]} alt={social.title} />
           </a>
         ))}
       </div>

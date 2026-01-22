@@ -267,11 +267,11 @@ const dataContent = {
   },
   footer: {
     socials: [
-      { title: 'youtube', href: 'src/assets/images/socials/youtube.svg' },
-      { title: 'instagram', href: 'src/assets/images/socials/instagram.svg' },
-      { title: 'facebook', href: 'src/assets/images/socials/facebook.svg' },
-      { title: 'github', href: 'src/assets/images/socials/github.svg' },
-      { title: 'x', href: 'src/assets/images/socials/x.svg' },
+      { title: 'youtube', href: 'https://www.youtube.com' },
+      { title: 'instagram', href: 'https://www.instagram.com' },
+      { title: 'facebook', href: 'https://www.facebook.com' },
+      { title: 'github', href: 'https://www.github.com' },
+      { title: 'x', href: 'https://www.x.com' },
     ],
     copyright: '© 2024 Abstractly, Inc. All rights reserved.',
   },
