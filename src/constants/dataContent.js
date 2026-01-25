@@ -214,7 +214,25 @@ const dataContent = {
       btn: 'Get in touch',
     },
   },
-  finestCuratedAbstractsSection: {},
+  getTheFinestCuratedAbstractsSection: {
+    header: {
+      title: 'Get the finest curated abstracts delivered weekly to your inbox',
+    },
+    mainImage: 'finest-curated-abstracts-image',
+    peculiarities: [
+      { text: 'Exclusive access to new abstract images and collections' },
+      { text: 'Unlock special promotions only for subscribers' },
+      { text: 'Regular doses of artistic inspiration' },
+    ],
+    text: 'We only send you the best! No spam.',
+    form: {
+      input: {
+        placeholder: 'Enter your email',
+        hint: 'Enter your email',
+      },
+      btn: 'Subscribe',
+    },
+  },
   talkToOurTeam: {
     header: {
       title: 'Talk to our team',
@@ -246,6 +264,16 @@ const dataContent = {
       },
       btn: 'Submit',
     },
+  },
+  footer: {
+    socials: [
+      { title: 'youtube', href: 'https://www.youtube.com' },
+      { title: 'instagram', href: 'https://www.instagram.com' },
+      { title: 'facebook', href: 'https://www.facebook.com' },
+      { title: 'github', href: 'https://www.github.com' },
+      { title: 'x', href: 'https://www.x.com' },
+    ],
+    copyright: '© 2024 Abstractly, Inc. All rights reserved.',
   },
 };
 

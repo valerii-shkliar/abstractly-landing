@@ -1,7 +1,7 @@
 import dataContent from '../../../constants/dataContent';
+import { generateImgAlt } from '../../../utilities/generateImgAlt';
 import style from './TeamsSection.module.scss';
 import Marquee from 'react-fast-marquee';
-const fileNameRegExp = /([^/]+)(?=\.svg$)/;
 
 const { teamsSection } = dataContent;
 const images = Object.values(
@@ -23,10 +23,6 @@ function TeamsSection() {
       </Marquee>
     </section>
   );
-}
-
-function generateImgAlt(url) {
-  return url.match(fileNameRegExp)[0];
 }
 
 export default TeamsSection;
